@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rootelle Pruning Services - Expert Garden & Forestry Care</title>
+<meta name="description" content="Professional pruning services specializing in garden and forestry care. Enhance tree health and beauty with Rootelle pruning." />
+<!-- Google Fonts: Poppins for modern typography -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  /* Reset and base styling */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #eaf4e9, #d1ead7);
+    color: #000000;
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #333333;
+    outline: none;
+  }
+  h1, h2, h3, h4 {
+    color: #000000;
+    margin-top: 0;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2.75rem;
+    margin-bottom: 1em;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  p {
+    margin-bottom: 1.25em;
+    color: #000000;
+    font-size: 1.125rem;
+  }
+  strong {
+    font-weight: 700;
+  }
+
+  /* Container and layout */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  main {
+    padding-bottom: 64px;
+  }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: #d1ead7cc;
+    backdrop-filter: saturate(180%) blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(30,50,20,0.1);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo .material-icons {
+    color: #000000;
+    font-size: 2rem;
+  }
+  nav.desktop-nav {
+    display: flex;
+    gap: 32px;
+  }
+  nav.desktop-nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 0;
+    position: relative;
+  }
+  nav.desktop-nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+  nav.desktop-nav a:hover::after,
+  nav.desktop-nav a:focus::after {
+    width: 100%;
+  }
+  /* Hamburger menu */
+  button.mobile-menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000000;
+    font-size: 2.4rem;
+    display: none;
+  }
+  button.mobile-menu-toggle:focus {
+    outline: 2px solid #000000;
+    outline-offset: 3px;
+  }
+  /* Mobile nav */
+  nav.mobile-nav {
+    display: none;
+    background: #d1ead7dd;
+    backdrop-filter: saturate(180%) blur(10px);
+    padding: 16px 24px;
+  }
+  nav.mobile-nav.open {
+    display: block;
+  }
+  nav.mobile-nav a {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #000000;
+    font-size: 1.125rem;
+  }
+  nav.mobile-nav a:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Hero Section */
+  .hero {
+    position: relative;
+    background: linear-gradient(to bottom right, #3a6d32, #95bc7a);
+    color: #000000;
+    text-align: center;
+    padding: 120px 24px 96px;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 180%;
+    height: 180%;
+    background: radial-gradient(circle at center, rgba(60,100,40,0.15), transparent 70%);
+    filter: blur(80px);
+    animation: pulseGlow 10s ease-in-out infinite;
+    z-index: 0;
+  }
+  @keyframes pulseGlow {
+    0%, 100% { transform: scale(1); opacity: 0.3 }
+    50% { transform: scale(1.1); opacity: 0.5 }
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #000000;
+    text-shadow: none;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+  }
+  .hero p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+  .hero .btn-primary {
+    background: linear-gradient(135deg, #5a923b, #2a5d34);
+    color: #e6f0dc;
+    border: none;
+    padding: 16px 48px;
+    border-radius: 12px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(42,93,52,0.6);
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+  }
+  .hero .btn-primary:hover,
+  .hero .btn-primary:focus {
+    background: linear-gradient(135deg, #2a5d34, #5a923b);
+    box-shadow: 0 12px 30px rgba(42,93,52,0.9);
+    outline: none;
+  }
+
+  /* Main content sections */
+  section {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  /* Services Section */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 32px;
+  }
+  .service-card {
+    background: #f4f9f4;
+    border-radius: 16px;
+    padding: 24px 24px 32px;
+    box-shadow: 0 6px 15px rgba(60,100,40,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+  }
+  .service-card:hover,
+  .service-card:focus-within {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(42,93,52,0.25);
+    outline:none;
+  }
+  .service-image {
+    width: 100%;
+    max-height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(42,93,52,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-image:hover,
+  .service-image:focus {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(42,93,52,0.4);
+    outline:none;
+  }
+  .service-icon {
+    font-size: 3.5rem;
+    color: #3f6f2a;
+    margin-bottom: 16px;
+    align-self: center;
+  }
+  .service-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .service-description {
+    flex-grow: 1;
+    font-size: 1.125rem;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  .service-price {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #000000;
+    align-self: flex-end;
+  }
+
+  /* Gallery Section */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 24px;
+  }
+  .gallery-item img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(42,93,52,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .gallery-item img:hover,
+  .gallery-item img:focus {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(42,93,52,0.4);
+    outline:none;
+  }
+
+  /* Why Choose Us Section */
+  #why-choose {
+    background: #edf5e1;
+    border-radius: 20px;
+    padding: 48px 32px;
+    box-shadow: 0 4px 15px rgba(60, 100, 40, 0.1);
+    color: #000000;
+  }
+  #why-choose h2 {
+    margin-bottom: 32px;
+    font-size: 2.25rem;
+    text-align: center;
+  }
+  #why-choose ul {
+    list-style: disc;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #000000;
+  }
+  #why-choose ul li {
+    margin-bottom: 1.25em;
+  }
+
+  /* Disclaimer Section */
+  .disclaimer {
+    background: #e0e8db;
+    border-radius: 12px;
+    padding: 24px 32px;
+    color: #000000;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    border-left: 6px solid #3a6d32;
+    max-width: 1200px;
+    margin: 0 auto 64px auto;
+  }
+
+  /* Satisfaction Section */
+  .satisfaction {
+    background: #d5e4c9;
+    border-radius: 20px;
+    padding: 40px 32px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(42,93,52,0.15);
+    color: #000000;
+  }
+  .satisfaction h2 {
+    margin-bottom: 16px;
+    font-size: 2rem;
+  }
+  .satisfaction p {
+    font-size: 1.125rem;
+    margin-bottom: 32px;
+  }
+  .testimonial {
+    max-width: 700px;
+    margin: 0 auto;
+    font-style: italic;
+    position: relative;
+    padding-left: 40px;
+  }
+  .testimonial::before {
+    content: '“';
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    font-size: 5rem;
+    color: #a3c27a88;
+    font-weight: 700;
+    font-family: serif;
+  }
+  .testimonial-author {
+    margin-top: 12px;
+    font-weight: 700;
+  }
+
+  /* Footer */
+  footer {
+    background: #355e23;
+    color: #d8ecd1;
+    padding: 48px 24px;
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .footer-address {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .footer-social {
+    margin-top: 12px;
+  }
+  .footer-social a {
+    color: #d8ecd1;
+    margin-right: 16px;
+    font-size: 1.5rem;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+  }
+  .footer-social a:hover,
+  .footer-social a:focus {
+    color: #a3c27a;
+    outline:none;
+  }
+
+  /* New Additional Topics Section */
+  #additional-topics {
+    background: #edf5e1;
+    border-radius: 20px;
+    padding: 48px 32px;
+    box-shadow: 0 4px 15px rgba(60, 100, 40, 0.1);
+    color: #000000;
+  }
+  #additional-topics h2 {
+    margin-bottom: 32px;
+    font-size: 2.25rem;
+    text-align: center;
+  }
+  #additional-topics article {
+    margin-bottom: 32px;
+  }
+  #additional-topics h3 {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  #additional-topics p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    text-align: justify;
+  }
+
+  /* Responsive Breakpoints */
+  @media screen and (max-width: 767px) {
+    nav.desktop-nav {
+      display: none;
+    }
+    button.mobile-menu-toggle {
+      display: block;
+    }
+    .hero {
+      padding: 80px 16px 64px;
+    }
+    h1 {
+      font-size: 2.25rem;
+    }
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+    .gallery-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    footer .footer-container {
+      align-items: center;
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .services-grid {
+      grid-template-columns: repeat(2,1fr);
+    }
+    .gallery-grid {
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .gallery-grid {
+      grid-template-columns: repeat(4,1fr);
+    }
+  }
+
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="header-inner container">
+    <a href="#top" class="logo" aria-label="Rootelle Pruning homepage">
+      <span class="material-icons" aria-hidden="true">park</span> Rootelle Pruning
+    </a>
+    <nav class="desktop-nav" role="navigation" aria-label="Primary navigation">
+      <a href="#services" tabindex="0">Services</a>
+      <a href="#pricing" tabindex="0">Pricing</a>
+      <a href="#gallery" tabindex="0">Gallery</a>
+      <a href="#why-choose" tabindex="0">Why Choose Us</a>
+      <a href="#additional-topics" tabindex="0">More Topics</a>
+      <a href="#disclaimer" tabindex="0">Disclaimer</a>
+      <a href="#contact" tabindex="0">Contact</a>
+    </nav>
+    <button class="mobile-menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span class="material-icons" aria-hidden="true">menu</span>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="mobile-nav" role="navigation" aria-label="Mobile primary navigation">
+    <a href="#services" tabindex="-1">Services</a>
+    <a href="#pricing" tabindex="-1">Pricing</a>
+    <a href="#gallery" tabindex="-1">Gallery</a>
+    <a href="#why-choose" tabindex="-1">Why Choose Us</a>
+    <a href="#additional-topics" tabindex="-1">More Topics</a>
+    <a href="#disclaimer" tabindex="-1">Disclaimer</a>
+    <a href="#contact" tabindex="-1">Contact</a>
+  </nav>
+</header>
+
+<main id="top" role="main">
+  <section class="hero" aria-label="Introduction to Rootelle pruning services">
+    <div class="hero-content">
+      <h1>Rootelle Pruning Services</h1>
+      <p>Professional garden and forestry pruning to enrich the health, growth, and beauty of your trees and shrubs.</p>
+      <button class="btn-primary" tabindex="0" aria-label="Contact Rootelle Pruning Services">Contact Us Now</button>
+    </div>
+  </section>
+
+  <section id="services" class="container" aria-labelledby="services-title">
+    <h2 id="services-title">Our Expert Pruning Services</h2>
+    <p>With decades of experience, Rootelle Pruning offers tailored care to every branch and leaf. Our professionals ensure sustainable, precise, and health-focused pruning solutions that nourish your garden and forest environments.</p>
+    <div class="services-grid" role="list">
+      <article class="service-card" role="listitem" tabindex="0" aria-label="Tree Shaping Service">
+        <img class="service-image" src="s1.png" alt="Well shaped leafy garden tree with pruned branches under sunlight" />
+        <span class="material-icons service-icon" aria-hidden="true">forest</span>
+        <h3 class="service-title">Tree Shaping</h3>
+        <p class="service-description">Sculpting your trees to enhance aesthetics and promote healthy growth. Ideal for ornamental gardens and managing canopy structure. Our careful shaping helps maintain the natural beauty while increasing sunlight penetration and air circulation.</p>
+        <div class="service-price">$150 - $500</div>
+      </article>
+      <article class="service-card" role="listitem" tabindex="0" aria-label="Deadwood Removal Service">
+        <img class="service-image" src="s2.png" alt="Professional pruning removing deadwood branches from a large durable tree trunk" />
+        <span class="material-icons service-icon" aria-hidden="true">delete_sweep</span>
+        <h3 class="service-title">Deadwood Removal</h3>
+        <p class="service-description">Removing dead and decaying branches to prevent disease and improve tree vitality. Essential for forest health maintenance. This service reduces risk of falling limbs and encourages new growth.</p>
+        <div class="service-price">$100 - $350</div>
+      </article>
+      <article class="service-card" role="listitem" tabindex="0" aria-label="Hedge & Shrub Pruning Service">
+        <img class="service-image" src="s3.png" alt="Neatly trimmed green garden hedge growing alongside stone garden path" />
+        <span class="material-icons service-icon" aria-hidden="true">grass</span>
+        <h3 class="service-title">Hedge & Shrub Pruning</h3>
+        <p class="service-description">Regular trimming of hedges and shrubs to keep your garden tidy, structured, and flourishing throughout the seasons. We specialize in shaping, thinning, and seasonal maintenance to preserve health and style.</p>
+        <div class="service-price">$80 - $300</div>
+      </article>
+      <article class="service-card" role="listitem" tabindex="0" aria-label="Safety Pruning Service">
+        <img class="service-image" src="s4.png" alt="Professional pruning hazardous bnrach from tall tree near residential property by trained arborist" />
+        <span class="material-icons service-icon" aria-hidden="true">security</span>
+        <h3 class="service-title">Safety Pruning</h3>
+        <p class="service-description">Ensuring hazardous branches are removed promptly to protect your property and loved ones from potential risks. Our expert team identifies and mitigates weak limbs and infection risks to keep your outdoor environment safe.</p>
+        <div class="service-price">$120 - $400</div>
+      </article>
+      <article class="service-card" role="listitem" tabindex="0" aria-label="Fruit Tree Pruning Service">
+        <img class="service-image" src="s5.png" alt="Ripe fruit-bearing tree carefully pruned to maximize yield and sunlight exposure" />
+        <span class="material-icons service-icon" aria-hidden="true">local_florist</span>
+        <h3 class="service-title">Fruit Tree Pruning</h3>
+        <p class="service-description">Optimizing fruit yield and quality by sculpting and managing your orchard trees with expert care. We recommend pruning schedules based on tree aging to ensure vibrant crops year after year.</p>
+        <div class="service-price">$100 - $450</div>
+      </article>
+      <article class="service-card" role="listitem" tabindex="0" aria-label="Forest Thinning Service">
+        <img class="service-image" src="s6.png" alt="Selective forestry thinning intervention by professional arborists in dense forest" />
+        <span class="material-icons service-icon" aria-hidden="true">park</span>
+        <h3 class="service-title">Forest Thinning</h3>
+        <p class="service-description">Selective removal of trees to reduce competition, benefiting growth and ecosystem balance in larger forestry spaces. This technique helps maintain healthy forests and reduces wildfire risks.</p>
+        <div class="service-price">$300 - $1500</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="pricing" class="container" aria-labelledby="pricing-title">
+    <h2 id="pricing-title">Service Pricing Overview</h2>
+    <p>At Rootelle Pruning, we believe in transparent, competitive pricing that reflects the quality and scope of work you receive. Our pricing is designed to offer value for all types of properties, from residential gardens to extensive forested areas. Below is a detailed overview:</p>
+    <ul>
+      <li><strong>Basic Garden Pruning Package:</strong> Starting at $250 - Includes hedge trimming, light shrub pruning, and general garden clean-up to maintain neat and healthy outdoor space.</li>
+      <li><strong>Advanced Tree Care Package:</strong> Starting at $600 - Comprehensive tree shaping, deadwood removal, fruit tree care, and health assessment to ensure maximum vitality and aesthetic appeal.</li>
+      <li><strong>Forestry Maintenance Package:</strong> Starting at $2000 - Includes selective thinning, safety pruning, and disease management services tailored for forested properties to support ecological balance and fire risk reduction.</li>
+      <li><strong>Custom Services:</strong> Prices vary based on detailed project assessment. Contact us for a personalized quote and consultation tailored to your unique garden or forest needs.</li>
+    </ul>
+    <p>Our team conducts thorough site evaluations before providing a quotation, ensuring accurate and fair pricing. We prioritize clear communication, timely updates, and no hidden fees to provide you peace of mind.</p>
+    <p>We also offer seasonal contract services for regular pruning and maintenance, designed to keep your greenery thriving year-round. Contact us to learn more about our flexible scheduling and package options.</p>
+  </section>
+
+  <section id="gallery" class="container" aria-labelledby="gallery-title">
+    <h2 id="gallery-title">Gallery of Our Work</h2>
+    <p>View our portfolio showcasing the flourishing beauty we bring to gardens and forests through expert pruning.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item" tabindex="0">
+        <img src="g1.png" alt="Beautifully shaped oak tree in a manicured garden with lush green grass and morning sun rays" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="g2.png" alt="Close-up of professional pruning dead branches from a large maple tree in early autumn" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="g3.png" alt="Neatly trimmed garden hedge lining a white painted wooden fence with sunlight filtering through leaves" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="g4.png" alt="Pruner removing hazardous branches from a large pine tree near residential property on a clear day" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="hg5.png" alt="Healthy plum tree with ripe fruits after careful pruning viewed against blue sky" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="g6.png" alt="Forestry workers thinning dense eucalyptus forest with safety gear and professional chain saws" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="g7.png" alt="Sunlit private garden showcasing pruned shrubs, blooming flowers, and green lawn" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="g8.png" alt="High-quality pruning shears and saw tools resting on wooden bench in a garden" />
+      </div>
+    </div>
+  </section>
+
+  <section id="why-choose" class="container" aria-labelledby="why-choose-title">
+    <h2 id="why-choose-title">Why Choose Rootelle Pruning?</h2>
+    <ul>
+      <li><strong>Experienced Professionals:</strong> Our team consists of highly trained arborists skilled in the latest pruning techniques ensuring optimal plant health and aesthetics.</li>
+      <li><strong>Eco-friendly Practices:</strong> Commitment to sustainable and environmentally responsible pruning that supports biodiversity and minimizes impact.</li>
+      <li><strong>Personalized Service:</strong> We tailor our services to fit the unique needs of your garden or forest, enhancing growth and beauty.</li>
+      <li><strong>Safety First:</strong> Dedicated to safe working practices protecting your property and our team while delivering excellent results.</li>
+      <li><strong>Transparent Pricing:</strong> Clear, competitive prices with no hidden fees. We provide detailed quotes before starting any work.</li>
+      <li><strong>Customer Satisfaction:</strong> Our focus is on building long-term relationships through quality, reliability, and excellent communication.</li>
+    </ul>
+  </section>
+
+  <section id="additional-topics" class="container" aria-labelledby="additional-topics-title">
+    <h2 id="additional-topics-title">Additional Pruning Topics &amp; Tips</h2>
+    <article>
+      <h3>The Importance of Seasonal Pruning</h3>
+      <p>Pruning in the right season ensures your plants recover quickly and experience less stress. Each plant type responds differently to pruning, so seasonal knowledge is crucial to maximize bloom and fruit production while preventing disease.</p>
+    </article>
+    <article>
+      <h3>Sustainable Pruning Practices</h3>
+      <p>Rootelle Pruning integrates sustainable methods to promote biodiversity and soil health. Our selective pruning techniques support natural wildlife habitats and reduce the need for chemical treatments.</p>
+    </article>
+    <article>
+      <h3>Choosing the Right Pruning Tools</h3>
+      <p>Using high-quality, clean, and sharp tools not only improves precision but also reduces damage and infection risk. Tools like bypass pruners, loppers, and pruning saws are selected based on plant thickness and type.</p>
+    </article>
+    <article>
+      <h3>Disease &amp; Pest Management Through Pruning</h3>
+      <p>Effective pruning removes infected or infested plant parts early, curbing potential outbreaks. Our experts provide guidance on recognizing symptoms during pruning to maintain a healthy garden or forest.</p>
+    </article>
+  </section>
+
+  <section id="satisfaction" class="satisfaction" aria-labelledby="satisfaction-title">
+    <h2 id="satisfaction-title">Enhancing Customer Satisfaction Every Season</h2>
+    <p>At Rootelle Pruning, your satisfaction is our priority. We combine expert knowledge, state-of-the-art equipment, and a passion for nature to provide exceptional pruning services that keep your garden and forest thriving year-round.</p>
+    <blockquote class="testimonial" tabindex="0" aria-label="Customer testimonial">
+      “Rootelle Pruning transformed our garden trees and shrubs into an exquisite landscape that welcomes every season beautifully. Their team was professional, punctual, and highly skilled. We highly recommend them to anyone looking for expert pruning services.”
+      <footer class="testimonial-author">— Jamie L., New York, NY</footer>
+    </blockquote>
+    <blockquote class="testimonial" tabindex="0" aria-label="Customer testimonial">
+      “Their forestry thinning service saved our property from potential hazards and revitalized our wooded area. The care and detail they put into the work are unmatched. Excellent customer communication throughout the process.”
+      <footer class="testimonial-author">— Carlos M., Upstate NY</footer>
+    </blockquote>
+  </section>
+
+  <section id="disclaimer" class="disclaimer" aria-labelledby="disclaimer-title">
+    <h2 id="disclaimer-title">Disclaimer</h2>
+    <p>Rootelle Pruning provides professional pruning services with utmost care and expertise. However, due to the natural variability of trees and environmental factors, we cannot guarantee specific growth outcomes or fruit yields. Prices and service scope are subject to change based on property assessment and unforeseen circumstances. Always consult with local authorities regarding protected species and pruning regulations. Rootelle Pruning disclaims liability for damages resulting from untreated tree conditions or external environmental events.</p>
+  </section>
+</main>
+
+<footer role="contentinfo" id="contact">
+  <div class="footer-container container">
+    <address class="footer-address">
+      <strong>Contact Us:</strong><br />
+      Rootelle Pruning<br />
+      120 E 12th St, New York, NY 10003, USA<br />
+      Phone: (555) 123-4567<br />
+      Email: <a href="mailto:info@rootellepruning.com">info@rootellepruning.com</a>
+    </address>
+    <div class="footer-social" aria-label="Social Media Links">
+      <a href="#" aria-label="Facebook" tabindex="0"><span class="material-icons">facebook</span></a>
+      <a href="#" aria-label="Twitter" tabindex="0"><span class="material-icons">twitter</span></a>
+      <a href="#" aria-label="Instagram" tabindex="0"><span class="material-icons">instagram</span></a>
+      <a href="#" aria-label="LinkedIn" tabindex="0"><span class="material-icons">linkedin</span></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Toggle mobile menu
+  const menuToggle = document.querySelector('button.mobile-menu-toggle');
+  const mobileNav = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    // Manage tabindex for accessibility (trap focus in menu if open)
+    const links = mobileNav.querySelectorAll('a');
+    links.forEach(link => {
+      link.tabIndex = isOpen ? 0 : -1;
+    });
+  });
+
+  // Trap focus inside mobile nav when open
+  mobileNav.addEventListener('keydown', (e) => {
+    if (!mobileNav.classList.contains('open')) return;
+    const focusable = Array.from(mobileNav.querySelectorAll('a'));
+    const first = focusable[0];
+    const last = focusable[focusable.length -1];
+    if (e.key === 'Tab') {
+      if (e.shiftKey) { // shift + tab
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else { // tab
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    }
+    if (e.key === 'Escape') {
+      menuToggle.click();
+      menuToggle.focus();
+    }
+  });
+
+  // Make "Contact Us Now" hero button scroll smoothly to contact/address section
+  document.querySelector('.hero .btn-primary').addEventListener('click', () => {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>
+
+
