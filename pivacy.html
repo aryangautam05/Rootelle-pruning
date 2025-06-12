@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy - Rootelle Pruning Services</title>
+<meta name="description" content="Privacy policy of Rootelle Pruning Services explaining data collection, use, protection, and customer rights." />
+<!-- Google Fonts & Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  /* Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #eaf4e9, #d1ead7);
+    color: #000;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #444;
+    outline: none;
+  }
+  h1, h2, h3 {
+    color: #000;
+    margin-top: 0;
+  }
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 24px;
+  }
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #2a5d34;
+    padding-bottom: 12px;
+  }
+  h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1em;
+  }
+  p {
+    margin-bottom: 1.25em;
+    font-size: 1.125rem;
+    color: #000;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 2em;
+  }
+  li {
+    margin-bottom: 1em;
+  }
+  /* Container */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: #d1ead7cc;
+    backdrop-filter: saturate(180%) blur(10px);
+    box-shadow: 0 2px 5px rgba(30,50,20,0.1);
+    z-index: 1000;
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.75rem 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo .material-icons {
+    font-size: 2rem;
+    color: #2a5d34;
+  }
+  nav.desktop-nav {
+    display: flex;
+    gap: 24px;
+  }
+  nav.desktop-nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 0;
+    position: relative;
+    color: #000;
+  }
+  nav.desktop-nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #2a5d34;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+  nav.desktop-nav a:hover::after,
+  nav.desktop-nav a:focus::after {
+    width: 100%;
+  }
+  button.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2.4rem;
+    color: #000;
+    cursor: pointer;
+  }
+  button.mobile-menu-toggle:focus {
+    outline: 2px solid #2a5d34;
+    outline-offset: 3px;
+  }
+  nav.mobile-nav {
+    display: none;
+    background: #d1ead7dd;
+    backdrop-filter: saturate(180%) blur(10px);
+    padding: 1rem 1.5rem;
+  }
+  nav.mobile-nav.open {
+    display: block;
+  }
+  nav.mobile-nav a {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #000;
+  }
+  nav.mobile-nav a:last-child {
+    margin-bottom: 0;
+  }
+  /* Hero */
+  .hero {
+    background: linear-gradient(to bottom right, #3a6d32, #95bc7a);
+    color: #000;
+    padding: 6rem 1.5rem 3rem;
+    text-align: center;
+  }
+  .hero h1 {
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 0;
+  }
+  /* Content */
+  section {
+    margin-bottom: 3.5rem;
+  }
+  /* Footer */
+  footer {
+    background: #355e23;
+    color: #d8ecd1;
+    padding: 3rem 1.5rem;
+  }
+  footer .footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+  }
+  footer a {
+    color: #d8ecd1;
+    text-decoration: underline;
+  }
+  footer a:hover, footer a:focus {
+    color: #a3c27a;
+  }
+  /* Responsive */
+  @media (max-width: 767px){
+    nav.desktop-nav {
+      display: none;
+    }
+    button.mobile-menu-toggle {
+      display: block;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Rootelle Pruning homepage">
+      <span class="material-icons" aria-hidden="true">park</span> Rootelle Pruning
+    </a>
+    <nav class="desktop-nav" role="navigation" aria-label="Primary navigation">
+     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0"aria-current="page>Privacy</a>
+        <a href="terms.html" tabindex="0"">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+    <button class="mobile-menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span class="material-icons" aria-hidden="true">menu</span>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="mobile-nav" role="navigation" aria-label="Mobile primary navigation">
+   <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0"aria-current="page>Privacy</a>
+        <a href="terms.html" tabindex="0"">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+
+<section class="hero" aria-label="Privacy policy introduction">
+  <h1>Privacy Policy</h1>
+  <p>Your privacy is critically important to us at Rootelle Pruning Services. This page outlines how we collect, use, and protect your information.</p>
+</section>
+
+<main class="container" role="main">
+  <!-- Generate 40 points with detailed explanations ~15 lines each -->
+  <section aria-label="Privacy Policy Details">
+    <ol>
+      <li>
+        <h3>Information We Collect</h3>
+        <p>We collect various types of information when you visit our website, use our services, or communicate with us. This includes personal identification information like your name, email address, phone number, IP address, and any other data you provide directly.</p>
+        <p>Our goal is to ensure that any data collected enhances your user experience and allows us to provide tailored services while maintaining data security and privacy.</p>
+        <p>We also capture usage data and cookies to analyze traffic and optimize the site functionality.</p>
+      </li>
+      <li>
+        <h3>How We Use Your Information</h3>
+        <p>Your personal information is used strictly to communicate with you regarding our services, respond to your inquiries, process transactions, and keep you informed about updates, offers, and changes relevant to your interests.</p>
+        <p>Additionally, usage data helps us improve our website, identify trends, and better understand user needs.</p>
+        <p>We never sell or rent your personal data to third parties for marketing or other purposes.</p>
+      </li>
+      <li>
+        <h3>Cookies and Tracking Technologies</h3>
+        <p>The Rootelle Pruning website uses cookies and similar tracking technologies to personalize content, remember user preferences, enable certain site features, and collect analytics.</p>
+        <p>Cookies are small files that are stored on your device to improve your browsing experience and deliver tailored ads where applicable.</p>
+        <p>You can control or disable cookies through your browser settings; however, disabling cookies may impact your ability to use certain features.</p>
+      </li>
+      <li>
+        <h3>Data Security Measures</h3>
+        <p>We employ advanced technical and organizational security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction.</p>
+        <p>This includes using SSL encryption for data transmission, firewalls, regular software updates, and secure data storage protocols.</p>
+        <p>Our staff is trained in data protection principles to ensure confidential handling of user information.</p>
+      </li>
+      <li>
+        <h3>Your Rights to Access and Control Your Data</h3>
+        <p>You have the right to access your personal data we hold and request correction or deletion where appropriate.</p>
+        <p>You may also withdraw consent for data processing at any time, subject to legal or contractual constraints.</p>
+        <p>For any such requests, please contact us using the details provided at the bottom of this page.</p>
+      </li>
+      <li>
+        <h3>Third-Party Service Providers</h3>
+        <p>Rootelle Pruning may share your data with trusted third-party service providers to support website operations, analytics, customer service, and marketing under strict confidentiality agreements.</p>
+        <p>These providers are only permitted to process your data as directed by us and are obligated to protect your privacy.</p>
+        <p>We do not control third-party websites linked from our site and encourage you to review their privacy policies.</p>
+      </li>
+      <li>
+        <h3>Children’s Privacy</h3>
+        <p>We do not knowingly collect personal information from children under the age of 13 without parental consent.</p>
+        <p>If you believe we have inadvertently gathered such data, please contact us immediately to have it removed.</p>
+        <p>Our services and website content are intended for adult users unless explicitly stated otherwise.</p>
+      </li>
+      <li>
+        <h3>Data Retention Policy</h3>
+        <p>Personal data is retained only as long as necessary for the purposes it was collected for, including legal or regulatory requirements.</p>
+        <p>When no longer needed, data is securely deleted or anonymized to protect your privacy.</p>
+        <p>Retention periods for specific types of data may vary and will be made available on request.</p>
+      </li>
+      <li>
+        <h3>Communication and Marketing</h3>
+        <p>We may send you promotional materials, newsletters, or service updates if you have opted in to receive them.</p>
+        <p>You can unsubscribe at any time by following links in our communications or contacting us directly.</p>
+        <p>We respect your choices and do not spam or share your information for marketing purposes outside of our service scope.</p>
+      </li>
+      <li>
+        <h3>Use of Analytics Tools</h3>
+        <p>Rootelle Pruning uses third-party analytics services like Google Analytics to monitor website traffic and user behavior anonymously.</p>
+        <p>This data helps us evaluate content effectiveness, identify popular services, and improve user experience.</p>
+        <p>Analytics data does not identify individual users and is handled under strict compliance with privacy laws.</p>
+      </li>
+      <li>
+        <h3>Information from Social Media</h3>
+        <p>If you interact with our social media profiles, we may collect and process data as described in this policy and in accordance with the social media platform's policies.</p>
+        <p>We do not have control over social media data collection and recommend reviewing the privacy terms of any platform you engage with.</p>
+        <p>Social media integration on our site follows privacy best practices and protects user data.</p>
+      </li>
+      <li>
+        <h3>Location Data</h3>
+        <p>We do not collect precise location data from users unless explicitly provided for services requiring it.</p>
+        <p>General location information may be inferred from IP addresses to improve service delivery and adapt content regionally.</p>
+        <p>We do not share precise location data with third parties.</p>
+      </li>
+      <li>
+        <h3>Data Transfers</h3>
+        <p>Your personal data may be processed on servers located within your country or internationally depending on service providers.</p>
+        <p>Where data is transferred internationally, we ensure it is protected with appropriate safeguards compliant with applicable laws.</p>
+        <p>We take care to use trustworthy partners who respect privacy standards.</p>
+      </li>
+      <li>
+        <h3>Automated Decision Making</h3>
+        <p>Rootelle Pruning does not utilize automated decision making or profiling processes that significantly affect users without human intervention.</p>
+        <p>All decisions involving service provision or customer interaction are managed by our trained staff.</p>
+        <p>Should this change, we will inform users and comply with transparency obligations.</p>
+      </li>
+      <li>
+        <h3>User Account Security</h3>
+        <p>If you create an account on our website or platforms, you are responsible for maintaining password confidentiality and securing your login credentials.</p>
+        <p>We use encryption and secure protocols to store user credentials safely.</p>
+        <p>Notify us promptly of any unauthorized access or data breaches involving your account.</p>
+      </li>
+      <li>
+        <h3>Links to Other Websites</h3>
+        <p>Our website may contain links to external sites not operated by Rootelle Pruning.</p>
+        <p>We do not control and are not responsible for the privacy practices or content of these sites.</p>
+        <p>We recommend reviewing their privacy policies whenever you visit third-party websites.</p>
+      </li>
+      <li>
+        <h3>Use of Contact Forms</h3>
+        <p>Information submitted through our contact forms is used solely to respond to your inquiries or provide requested services.</p>
+        <p>We do not use contact form data for marketing unless consent is explicitly given.</p>
+        <p>Your data will not be shared beyond the purpose of handling your request.</p>
+      </li>
+      <li>
+        <h3>Consent Management</h3>
+        <p>By using our website and services, you consent to the collection and use of your data as described in this policy.</p>
+        <p>You have the right to withdraw consent at any time, with the understanding that this may affect your access to some services.</p>
+        <p>We provide clear options for managing your privacy preferences.</p>
+      </li>
+      <li>
+        <h3>Website Security Features</h3>
+        <p>We use up-to-date security technologies including SSL encryption, firewalls, and intrusion detection to protect user data and prevent unauthorized access.</p>
+        <p>Regular audits and updates are performed to maintain high security standards.</p>
+        <p>Your data's security is a priority and is rigorously guarded within our systems.</p>
+      </li>
+      <li>
+        <h3>Data Correction and Updates</h3>
+        <p>You may request to correct or update your personal information at any time by contacting our support team.</p>
+        <p>We promptly process corrections to keep your data accurate and current.</p>
+        <p>This ensures proper communication and service delivery based on reliable information.</p>
+      </li>
+      <li>
+        <h3>Privacy Policy Updates</h3>
+        <p>Rootelle Pruning reserves the right to update or modify this privacy policy to reflect changes in practices, technology, or legal requirements.</p>
+        <p>We will inform users of significant changes through website notifications or direct communications.</p>
+        <p>Continued use of services implies acceptance of any updated privacy terms.</p>
+      </li>
+      <li>
+        <h3>Contacting Us</h3>
+        <p>If you have questions, concerns, or requests regarding your privacy or this policy, please contact us at the details provided below.</p>
+        <p>We aim to respond promptly and responsibly to all inquiries respecting your privacy rights.</p>
+        <p>Your engagement is important in helping us maintain trust and compliance.</p>
+      </li>
+      <li>
+        <h3>Data Minimization Principle</h3>
+        <p>We collect only data necessary to provide and improve our services, ensuring minimal intrusion into your privacy.</p>
+        <p>This principle limits data exposure and simplifies management while delivering effective service.</p>
+        <p>Respecting data minimization supports user trust and regulatory compliance.</p>
+      </li>
+      <li>
+        <h3>Use of Social Media Widgets</h3>
+        <p>Social media buttons on our website facilitate sharing but may collect usage data pursuant to social platform policies.</p>
+        <p>We do not control these widgets and advise users to review each social platform's privacy policy.</p>
+        <p>Disabling or avoiding social widgets can reduce external tracking.</p>
+      </li>
+      <li>
+        <h3>Data Breach Notifications</h3>
+        <p>In the unlikely event of a data breach affecting your personal information, Rootelle Pruning commits to timely notification in accordance with applicable laws.</p>
+        <p>We will inform you about the nature of the breach, potential impacts, and remedial actions.</p>
+        <p>Your protection and transparency are critical concerns for us.</p>
+      </li>
+      <li>
+        <h3>Use of Analytical Cookies</h3>
+        <p>Analytical cookies help us understand user interaction to improve site design and content relevance.</p>
+        <p>These cookies do not collect personally identifiable information and are used anonymously.</p>
+        <p>You can control cookie usage via browser settings or cookie preference options.</p>
+      </li>
+      <li>
+        <h3>Employee Access to Data</h3>
+        <p>Access to your personal information within our organization is restricted to authorized personnel as needed for their roles.</p>
+        <p>Employees are trained in data privacy and subject to confidentiality agreements to safeguard your data.</p>
+        <p>Unauthorized access or disclosure is prohibited and addressed rigorously.</p>
+      </li>
+      <li>
+        <h3>Privacy by Design</h3>
+        <p>Privacy considerations are integrated into all phases of product design and service delivery at Rootelle Pruning.</p>
+        <p>This proactive approach minimizes data risks and empowers users with control over their information.</p>
+        <p>We continually evaluate and enhance privacy features aligned with best practices.</p>
+      </li>
+      <li>
+        <h3>Use of Marketing Automation</h3>
+        <p>Our marketing communications may use automation tools to personalize messages while respecting your privacy preferences.</p>
+        <p>You may opt-out at any time to cease automated marketing emails or alerts.</p>
+        <p>Data used in marketing is managed securely and not shared with third parties without consent.</p>
+      </li>
+      <li>
+        <h3>Access from Different Jurisdictions</h3>
+        <p>Our services are accessible globally; however, data protection laws vary depending on your location.</p>
+        <p>We comply with applicable regulations such as GDPR within the EU and other relevant laws internationally.</p>
+        <p>Users are advised to understand local laws and rights concerning data privacy.</p>
+      </li>
+      <li>
+        <h3>User Behavior Tracking</h3>
+        <p>We analyze user movement on our site anonymously to understand engagement and improve navigation, content, and service offerings.</p>
+        <p>This data is aggregated and does not contain personally identifiable information unless explicitly provided.</p>
+        <p>Users may manage tracking preferences as described in the cookie policy.</p>
+      </li>
+      <li>
+        <h3>Use of Contact Information</h3>
+        <p>Contact details collected during service inquiries are used to respond and provide requested services effectively.</p>
+        <p>We do not share your contact information beyond operational necessities or legal requirements.</p>
+        <p>You may request deletion or change of your data at any time.</p>
+      </li>
+      <li>
+        <h3>Third-Party Advertising</h3>
+        <p>Our website does not host third-party advertisements or trackers that collect personal data without consent.</p>
+        <p>We maintain a clear separation between service content and third-party promotional content.</p>
+        <p>Should this policy change, users will be notified promptly.</p>
+      </li>
+      <li>
+        <h3>Security Incident Response</h3>
+        <p>Rootelle Pruning has established procedures for immediate response to any security incidents involving user data.</p>
+        <p>This includes containment, investigation, mitigation, and notification to affected users.</p>
+        <p>We continually audit and improve our security posture to prevent future incidents.</p>
+      </li>
+      <li>
+        <h3>Data Anonymization Techniques</h3>
+        <p>Where data analysis is performed, personal information may be anonymized to prevent identification of individual users.</p>
+        <p>This technique allows for valuable insights while preserving privacy.</p>
+        <p>We apply industry best practices in anonymization and data aggregation.</p>
+      </li>
+      <li>
+        <h3>Data Portability</h3>
+        <p>You may request a copy of your personal data held by Rootelle Pruning in a structured, commonly used, and machine-readable format.</p>
+        <p>We process such requests promptly and securely.</p>
+        <p>This facilitates your rights to use your data across other services or applications.</p>
+      </li>
+      <li>
+        <h3>Children’s Online Privacy</h3>
+        <p>We do not knowingly collect data from children under the age of 13 without parental consent.</p>
+        <p>If you believe that we might have collected such data, please contact us for immediate removal.</p>
+        <p>Our services are designed for adult users unless explicitly stated otherwise.</p>
+      </li>
+      <li>
+        <h3>Use of Secure Payment Processing</h3>
+        <p>Any payments made through our site or third-party platforms are processed using secure and PCI-compliant methods.</p>
+        <p>We do not store your credit card information on our servers.</p>
+        <p>All transactions are encrypted to protect financial data confidentiality.</p>
+      </li>
+      <li>
+        <h3>Opt-Out Options for Communications</h3>
+        <p>You have full control to opt out of marketing and promotional communications through email links or by contacting us directly.</p>
+        <p>We respect your decisions and promptly remove your contact from marketing databases upon request.</p>
+        <p>Transactional communications related to your service requests remain unaffected unless explicitly requested otherwise.</p>
+      </li>
+      <li>
+        <h3>User Feedback and Surveys</h3>
+        <p>We may invite you to provide feedback or participate in surveys to improve our services.</p>
+        <p>Your participation is voluntary, and data collected is treated confidentially.</p>
+        <p>Survey data is aggregated and used solely for service enhancement.</p>
+      </li>
+      <li>
+        <h3>Use of Web Beacons and Pixels</h3>
+        <p>We may employ web beacons or pixels to measure the effectiveness of emails or campaigns to ensure high-quality communication.</p>
+        <p>This technology does not collect personal data independently but tracks interactions anonymously.</p>
+        <p>Users may manage preferences to limit such tracking.</p>
+      </li>
+      <li>
+        <h3>Links To Other Services</h3>
+        <p>Our site may link to external services related to gardening or pruning. These links are provided for your convenience.</p>
+        <p>We do not manage their privacy policies and recommend you review them when visiting external sites.</p>
+        <p>Rootelle Pruning is not responsible for data handling practices outside of our control.</p>
+      </li>
+      <li>
+        <h3>International Data Privacy Compliance</h3>
+        <p>We strive to comply with data protection regulations globally, including GDPR in the EU, CCPA in California, and others.</p>
+        <p>Our policies reflect these requirements to uphold your privacy rights wherever you are located.</p>
+        <p>Please contact us if you have specific data privacy concerns based on your jurisdiction.</p>
+      </li>
+      <li>
+        <h3>Use of Cloud Storage Services</h3>
+        <p>We utilize reputable cloud service providers for data storage with strong security protocols.</p>
+        <p>These providers are contractually obligated to safeguard your data and operate under privacy regulations.</p>
+        <p>We carefully select cloud partners to maintain high standards of data protection.</p>
+      </li>
+      <li>
+        <h3>Data Protection Officer Contact</h3>
+        <p>If you wish to contact our Data Protection Officer or designated privacy contact, please use the details provided in the Contact section below.</p>
+        <p>We welcome all privacy-related inquiries and take privacy governance seriously.</p>
+        <p>Our team is dedicated to assisting with rights, requests, and concerns.</p>
+      </li>
+      <li>
+        <h3>Security of Communications</h3>
+        <p>Communications between you and Rootelle Pruning, such as emails or messages, are secured to the extent possible but we recommend not sharing sensitive personal information via unsecured channels.</p>
+        <p>We encrypt website traffic and use secure servers to reduce interception risks.</p>
+        <p>Your safe communication is a priority and we advise caution in data sharing.</p>
+      </li>
+      <li>
+        <h3>Retention of Marketing Data</h3>
+        <p>Marketing data such as email lists are retained only as long as consent is active or as required by law.</p>
+        <p>We regularly audit and cleanse our marketing databases to respect privacy limits.</p>
+        <p>Your rights to unsubscribe ensure control over your marketing data.</p>
+      </li>
+      <li>
+        <h3>Data Accuracy and Completeness</h3>
+        <p>We strive to keep your personal data accurate, complete, and up to date.</p>
+        <p>Users are encouraged to inform us of any changes or errors to maintain correct records.</p>
+        <p>Accurate data improves service management and communications.</p>
+      </li>
+      <li>
+        <h3>Use of Contact Details for Service Delivery</h3>
+        <p>Your contact details are used primarily for the provision of Rootelle Pruning's services including scheduling, billing, and support.</p>
+        <p>We ensure confidentiality and limit access to authorized personnel only.</p>
+        <p>We do not use your contact data for unrelated marketing purposes without explicit consent.</p>
+      </li>
+      <li>
+        <h3>Policy Effective Date</h3>
+        <p>This Privacy Policy is effective as of June 2024.</p>
+        <p>Any updates or amendments to this policy will be published promptly on this page.</p>
+        <p>We encourage users to review this policy regularly to stay informed about data practices.</p>
+      </li>
+      <li>
+        <h3>Security Incident History</h3>
+        <p>Rootelle Pruning maintains a strong track record of data security with no history of material data breaches impacting customer privacy.</p>
+        <p>Our team remains vigilant and continuously enhances security infrastructure.</p>
+        <p>We commit to transparency should any incident occur in the future.</p>
+      </li>
+      <li>
+        <h3>Data Controller and Processor Information</h3>
+        <p>Rootelle Pruning is the data controller responsible for your personal data.</p>
+        <p>We also engage trusted data processors under strict contracts to support operations.</p>
+        <p>Contact details and legal information are available upon request.</p>
+      </li>
+      <li>
+        <h3>Responsible Data Handling Principles</h3>
+        <p>Our commitment to responsible data handling encompasses transparency, purpose limitation, data minimization, accuracy, storage limitation, integrity, and confidentiality.</p>
+        <p>These principles underpin our privacy practices and our users' rights.</p>
+        <p>We encourage questions and feedback about our data policies.</p>
+      </li>
+      <li>
+        <h3>Use of Secure Forms</h3>
+        <p>Online forms collecting personal data are secured with encryption and validated to prevent misuse or malicious submissions.</p>
+        <p>Your submitted information is transmitted securely and stored in line with privacy compliance.</p>
+        <p>We respect the confidentiality of your feedback and inquiries.</p>
+      </li>
+      <li>
+        <h3>HIPAA or Other Sensitive Information</h3>
+        <p>Rootelle Pruning does not collect health information subject to HIPAA or other sensitive personal data categories.</p>
+        <p>If you share sensitive information unintentionally, please notify us immediately to ensure appropriate handling or removal.</p>
+        <p>We take enhanced privacy safeguards for any such cases if applicable.</p>
+      </li>
+      <li>
+        <h3>Data Subject Rights under GDPR</h3>
+        <p>European users benefit from specific rights under GDPR including access, rectification, erasure, restriction of processing, data portability, object to processing, and rights related to automated decision making.</p>
+        <p>Rootelle Pruning facilitates these rights fully per regulatory standards.</p>
+        <p>Please contact us for specific GDPR requests and information.</p>
+      </li>
+      <li>
+        <h3>Marketing Consent Management</h3>
+        <p>We utilize explicit opt-in mechanisms for marketing communications and respect all opt-out requests immediately.</p>
+        <p>Your preferences are honored and documented rigorously.</p>
+        <p>Our system provides transparent management of your choices.</p>
+      </li>
+      <li>
+        <h3>Security Policy Training</h3>
+        <p>Our employees receive regular privacy and security training to uphold our data protection standards.</p>
+        <p>This ongoing education supports responsible corporate behavior and user trust.</p>
+        <p>Training ensures staff awareness of current threats and policies.</p>
+      </li>
+      <li>
+        <h3>Privacy Policy Contact Information</h3>
+        <p>For privacy-related matters, please contact:</p>
+        <p>Rootelle Pruning<br />
+        Email: <a href="mailto:privacy@rootellepruning.com">privacy@rootellepruning.com</a><br />
+        Phone: (555) 123-4567</p>
+        <p>We welcome your questions and concerns and will respond promptly with clarity and transparency.</p>
+      </li>
+    </ol>
+  </section>
+</main>
+
+<footer role="contentinfo" id="contact">
+  <div class="footer-container">
+    <address class="footer-address">
+      <strong>Contact Us:</strong><br />
+      Rootelle Pruning<br />
+      120 E 12th St, New York, NY 10003, USA<br />
+      Phone: (555) 123-4567<br />
+      Email: <a href="mailto:info@rootellepruning.com">info@rootellepruning.com</a>
+    </address>
+    <div class="footer-social" aria-label="Social Media Links" style="margin-top:0.5rem;">
+      <a href="#" aria-label="Facebook" tabindex="0"><span class="material-icons">facebook</span></a>
+      <a href="#" aria-label="Twitter" tabindex="0"><span class="material-icons">twitter</span></a>
+      <a href="#" aria-label="Instagram" tabindex="0"><span class="material-icons">instagram</span></a>
+      <a href="#" aria-label="LinkedIn" tabindex="0"><span class="material-icons">linkedin</span></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('button.mobile-menu-toggle');
+  const mobileNav = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    // Manage accessibility tabindex for mobile links
+    const links = mobileNav.querySelectorAll('a');
+    links.forEach(link => {
+      link.tabIndex = isOpen ? 0 : -1;
+    });
+  });
+
+  mobileNav.addEventListener('keydown', e => {
+    if (!mobileNav.classList.contains('open')) return;
+    const focusable = Array.from(mobileNav.querySelectorAll('a'));
+    const first = focusable[0];
+    const last = focusable[focusable.length -1];
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    }
+    if (e.key === 'Escape') {
+      menuToggle.click();
+      menuToggle.focus();
+    }
+  });
+</script>
+</body>
+</html>
