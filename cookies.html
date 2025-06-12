@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cookies Policy - Rootelle Pruning Services</title>
+<meta name="description" content="Detailed cookies policy of Rootelle Pruning Services explaining cookie usage, management, and user preferences." />
+<!-- Google Fonts & Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  /* Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #eaf4e9, #d1ead7);
+    color: #000;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #444;
+    outline: none;
+  }
+  h1, h2, h3 {
+    color: #000;
+    margin-top: 0;
+  }
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 24px;
+  }
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #2a5d34;
+    padding-bottom: 12px;
+  }
+  h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1em;
+  }
+  p {
+    margin-bottom: 1.25em;
+    font-size: 1.125rem;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 2em;
+  }
+  li {
+    margin-bottom: 1em;
+  }
+  /* Container */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: #d1ead7cc;
+    backdrop-filter: saturate(180%) blur(10px);
+    box-shadow: 0 2px 5px rgba(30,50,20,0.1);
+    z-index: 1000;
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.75rem 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo .material-icons {
+    font-size: 2rem;
+    color: #2a5d34;
+  }
+  nav.desktop-nav {
+    display: flex;
+    gap: 24px;
+  }
+  nav.desktop-nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 0;
+    position: relative;
+    color: #000;
+  }
+  nav.desktop-nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #2a5d34;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+  nav.desktop-nav a:hover::after,
+  nav.desktop-nav a:focus::after {
+    width: 100%;
+  }
+  button.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2.4rem;
+    color: #000;
+    cursor: pointer;
+  }
+  button.mobile-menu-toggle:focus {
+    outline: 2px solid #2a5d34;
+    outline-offset: 3px;
+  }
+  nav.mobile-nav {
+    display: none;
+    background: #d1ead7dd;
+    backdrop-filter: saturate(180%) blur(10px);
+    padding: 1rem 1.5rem;
+  }
+  nav.mobile-nav.open {
+    display: block;
+  }
+  nav.mobile-nav a {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #000;
+  }
+  nav.mobile-nav a:last-child {
+    margin-bottom: 0;
+  }
+  /* Hero */
+  .hero {
+    background: linear-gradient(to bottom right, #3a6d32, #95bc7a);
+    color: #000;
+    padding: 6rem 1.5rem 3rem;
+    text-align: center;
+  }
+  .hero h1 {
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 0;
+  }
+  /* Terms content */
+  section.details ol {
+    counter-reset: item;
+  }
+  section.details ol li {
+    margin-bottom: 3rem;
+  }
+  section.details ol li h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  section.details ol li p {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+  }
+  /* Footer */
+  footer {
+    background: #355e23;
+    color: #d8ecd1;
+    padding: 3rem 1.5rem;
+  }
+  footer .footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+  }
+  footer a {
+    color: #d8ecd1;
+    text-decoration: underline;
+  }
+  footer a:hover, footer a:focus {
+    color: #a3c27a;
+  }
+  /* Cookie Consent Dialog */
+  #cookie-consent {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(58,109,50,0.95);
+    color: white;
+    padding: 1.5rem 2rem;
+    max-width: 960px;
+    width: calc(100% - 32px);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1100;
+    font-size: 1rem;
+  }
+  #cookie-consent p {
+    flex: 1 1 60%;
+    margin: 0 1rem 0 0;
+    min-width: 220px;
+  }
+  #cookie-consent .buttons {
+    flex: 1 1 35%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    min-width: 220px;
+  }
+  #cookie-consent button {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+  }
+  #cookie-consent button.accept-btn {
+    background-color: #2a5d34;
+    color: white;
+  }
+  #cookie-consent button.accept-btn:hover,
+  #cookie-consent button.accept-btn:focus {
+    background-color: #1f4224;
+    outline: none;
+  }
+  #cookie-consent button.decline-btn {
+    background-color: #e0e8db;
+    color: #2a5d34;
+  }
+  #cookie-consent button.decline-btn:hover,
+  #cookie-consent button.decline-btn:focus {
+    background-color: #c2d2b2;
+    outline: none;
+  }
+  /* Responsive */
+  @media (max-width: 767px){
+    nav.desktop-nav {
+      display: none;
+    }
+    button.mobile-menu-toggle {
+      display: block;
+    }
+    .hero {
+      padding: 80px 16px 64px;
+    }
+    h1 {
+      font-size: 2.25rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Rootelle Pruning homepage">
+      <span class="material-icons" aria-hidden="true">park</span> Rootelle Pruning
+    </a>
+    <nav class="desktop-nav" role="navigation" aria-label="Primary navigation">
+     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+    <button class="mobile-menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span class="material-icons" aria-hidden="true">menu</span>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="mobile-nav" role="navigation" aria-label="Mobile primary navigation">
+ <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+<section class="hero" aria-label="Cookies policy introduction">
+  <h1>Cookies Policy</h1>
+  <p>This policy explains how Rootelle Pruning uses cookies and similar technologies on our website. Please read carefully to understand your choices regarding cookies.</p>
+</section>
+<main class="container" role="main">
+  <section class="details" aria-label="Cookies policy details">
+    <ol>
+      <!-- Generate 40 points, each with approximately 10 lines explanation -->
+      <li>
+        <h3>What Are Cookies?</h3>
+        <p>Cookies are small text files placed on your computer or device by websites you visit. They store information such as login status, preferences, and tracking data to enhance your browsing experience. Cookies help in remembering user actions and improve website performance, making navigation smoother and more personalized.</p>
+      </li>
+      <li>
+        <h3>Types of Cookies We Use</h3>
+        <p>We use several types of cookies including essential cookies necessary for website operation, analytics cookies to understand user behavior, and functionality cookies that save your preferences. Marketing cookies are also used for personalized content and ads, but only with your consent. Each type serves a distinct role in improving your interaction with our site.</p>
+      </li>
+      <li>
+        <h3>Essential Cookies</h3>
+        <p>These cookies are critical to the basic functioning of our website, enabling core features such as secure login, form submission, and security controls. Without these, certain features may not work properly. They do not collect personal information or track your browsing activity beyond the website.</p>
+      </li>
+      <li>
+        <h3>Analytics Cookies</h3>
+        <p>Analytics cookies collect anonymous information about how visitors use our website — the pages visited, time spent, and navigation patterns. This information helps us analyze and improve website usability, ensuring we deliver content that matches visitor needs and identifying issues to optimize performance.</p>
+      </li>
+      <li>
+        <h3>Functional Cookies</h3>
+        <p>Functional cookies allow the website to remember your preferences, such as language selection or display settings. They help make your experience more personal and convenient by storing choices that customize the site appearance or behavior on subsequent visits.</p>
+      </li>
+      <li>
+        <h3>Marketing Cookies</h3>
+        <p>Marketing cookies track your usage across sites to deliver targeted advertisements relevant to your interests. These may also be used to limit the frequency of ads or measure campaign effectiveness. These cookies are only set with your explicit consent and can be declined without affecting website functionality.</p>
+      </li>
+      <li>
+        <h3>Third-Party Cookies</h3>
+        <p>Some cookies come from third-party services we integrate, like analytics or social media platforms. These cookies operate independently and are governed by the third parties’ privacy policies. We do not control these cookies but inform you to review third-party practices accordingly.</p>
+      </li>
+      <li>
+        <h3>How We Use Cookies</h3>
+        <p>Cookies help us personalize content, remember user preferences, enable key website features, analyze traffic, and provide relevant advertisements. They allow smoother service delivery, enhance security, and support marketing campaigns tailored to visitor interests.</p>
+      </li>
+      <li>
+        <h3>Consent to Cookie Use</h3>
+        <p>Upon first visiting our website, a cookie consent banner appears explaining our cookie use. You can accept or decline non-essential cookies. Essential cookies are always active as they support necessary site functionality. Your preferences are stored and respected for subsequent visits.</p>
+      </li>
+      <li>
+        <h3>Managing Cookies Preferences</h3>
+        <p>You can manage or revoke your cookie consent anytime by using the controls in the cookie consent banner or adjusting browser settings to block, delete, or control cookies. Instructions vary by browser and device, and disabling cookies may affect some functionalities of our website.</p>
+      </li>
+      <li>
+        <h3>How to Disable Cookies in Your Browser</h3>
+        <p>Most browsers allow you to control cookie settings. For example, in Chrome, go to Settings &gt; Privacy &amp; Security &gt; Cookies and other site data. In Firefox, go to Options &gt; Privacy &amp; Security &gt; Cookies. Disabling cookies completely may reduce website performance or access to certain features.</p>
+      </li>
+      <li>
+        <h3>Implications of Disabling Cookies</h3>
+        <p>Disabling cookies may cause parts of our website to function improperly or limit personalizations. Login persistence, shopping carts, and preference retention may be affected, leading to a less customized user experience. We recommend allowing essential cookies even if you disable others.</p>
+      </li>
+      <li>
+        <h3>Cookie Lifespan</h3>
+        <p>Cookies may be session-based (deleted when you close your browser) or persistent (remain on your device for defined periods). Lifespans vary depending on cookie purpose — for example, analytics cookies may persist for up to 2 years, while essential session cookies last only for the duration of your visit.</p>
+      </li>
+      <li>
+        <h3>Security of Cookies</h3>
+        <p>Cookies stored by Rootelle Pruning are secure and do not contain sensitive personal information like passwords. We use secure, encrypted cookies to protect against interception, and follow best practices for cookie management to safeguard your data.</p>
+      </li>
+      <li>
+        <h3>Use of Local Storage and Similar Technologies</h3>
+        <p>Beyond cookies, we may use local storage or similar browser technologies to enhance user experience, such as storing preferences or temporary data. These technologies are subject to similar privacy considerations and can be managed through your browser settings.</p>
+      </li>
+      <li>
+        <h3>Cookie Policy Changes</h3>
+        <p>We may update this cookies policy as technologies and regulations evolve. Users are encouraged to review this policy periodically. Changes are effective upon posting and continued use of our site indicates acceptance of updated practices.</p>
+      </li>
+      <li>
+        <h3>Cookies and Children’s Privacy</h3>
+        <p>Our website is intended for general audiences and does not knowingly collect information from children under 13 through cookies or other tracking, unless parental consent is obtained.</p>
+      </li>
+      <li>
+        <h3>Cookies on Mobile Devices</h3>
+        <p>Mobile browsers support cookies similarly to desktop browsers, and you can manage cookie settings on your mobile device. Cookies improve browsing on mobile by remembering preferences and session information.</p>
+      </li>
+      <li>
+        <h3>Cookie Identification and Names</h3>
+        <p>Each cookie has a unique name used to identify its purpose and data it stores, such as session management, preference storage, or analytics tracking. This naming helps in cookie management and transparency regarding usage.</p>
+      </li>
+      <li>
+        <h3>Cookie Consent Record</h3>
+        <p>We keep a record of your cookie consent choices to respect your preferences during future visits and comply with legal requirements. This information is stored securely and not shared with unauthorized parties.</p>
+      </li>
+      <li>
+        <h3>Cookies Used for Load Balancing</h3>
+        <p>Some cookies are used to distribute network traffic evenly across servers to ensure our website remains responsive and reliable during high usage periods.</p>
+      </li>
+      <li>
+        <h3>Session Cookies</h3>
+        <p>Session cookies last only during your visit and are deleted when the browser closes. They help in managing activities like logging in and navigating safely between pages.</p>
+      </li>
+      <li>
+        <h3>Persistent Cookies</h3>
+        <p>Persistent cookies remain on your device for a set period or until deleted manually. They help remember your preferences and login details between visits for convenience.</p>
+      </li>
+      <li>
+        <h3>Third-Party Analytics Cookies</h3>
+        <p>We use third-party services like Google Analytics that set cookies to collect aggregated usage data. This information is anonymous and used to enhance website functionality and user experience.</p>
+      </li>
+      <li>
+        <h3>Social Media Cookies</h3>
+        <p>When you use social media sharing features, cookies from those platforms may be set. We do not control these cookies; please refer to the social media site’s privacy policies for details.</p>
+      </li>
+      <li>
+        <h3>Advertising Cookies</h3>
+        <p>Advertising cookies help deliver relevant advertisements and measure their performance. They may track browsing activity across websites. We only set such cookies after obtaining your consent.</p>
+      </li>
+      <li>
+        <h3>Managing Cookie Preferences</h3>
+        <p>Your preferences for non-essential cookies can be managed via the cookie consent dialog, accessible on all pages. You can accept, decline, or customize which cookies are enabled at any time.</p>
+      </li>
+      <li>
+        <h3>Cookie Consent Dialog</h3>
+        <p>A banner or dialog box appears on your first visit or until consent is given or declined, explaining cookie use and providing control buttons to manage your preferences responsibly.</p>
+      </li>
+      <li>
+        <h3>Declining Cookies Effects</h3>
+        <p>Declining non-essential cookies may reduce some website functionalities, personalization, or targeted advertising but does not prevent access to basic content and essential services.</p>
+      </li>
+      <li>
+        <h3>Cookie Storage Locations</h3>
+        <p>Cookies are stored on your local device in your browser profile. You can view, manage, and delete cookies via your browser’s privacy settings to control your data exposure.</p>
+      </li>
+      <li>
+        <h3>Legal Bases for Cookie Usage</h3>
+        <p>We rely on your consent or legitimate interests to use cookies, depending on cookie type. Essential cookies function under legitimate interests, while marketing cookies require explicit consent.</p>
+      </li>
+      <li>
+        <h3>Responsibility for Cookie Compliance</h3>
+        <p>Rootelle Pruning ensures compliance with applicable data protection regulations regarding cookies, including GDPR and ePrivacy Directive, and regularly reviews practices accordingly.</p>
+      </li>
+      <li>
+        <h3>Cookies and Personal Data</h3>
+        <p>Cookies may involve personal data processing depending on their type and use. We take appropriate measures to safeguard such data and comply with privacy obligations.</p>
+      </li>
+      <li>
+        <h3>Cookie Withdrawal and Deletion</h3>
+        <p>You may withdraw consent and delete cookies anytime by managing your browser settings or using our cookie management tools embedded within the website.</p>
+      </li>
+      <li>
+        <h3>Impact of Cookies on Website Performance</h3>
+        <p>Cookies generally enhance performance by speeding access and personalization but could slightly impact load times depending on the number and size of cookies.</p>
+      </li>
+      <li>
+        <h3>Cookies and Mobile Apps</h3>
+        <p>While our website uses cookies, mobile apps may use similar tracking methods. Different policies apply to apps, which you can review within app settings.</p>
+      </li>
+      <li>
+        <h3>Technical Storage and Access</h3>
+        <p>Cookies involve technical storage on your device and access by our website or third parties necessary to provide requested features and services.</p>
+      </li>
+      <li>
+        <h3>Data Protection Contact</h3>
+        <p>For any questions regarding cookies or privacy, please contact us at the information provided below. We are committed to transparency and user control.</p>
+      </li>
+      <li>
+        <h3>Cookie Duration and Expiry</h3>
+        <p>Each cookie has a defined expiry date after which it is deleted automatically unless renewed upon subsequent visits.</p>
+      </li>
+      <li>
+        <h3>Browser Settings Recommendations</h3>
+        <p>Regularly review your browser’s cookie settings, clear unnecessary cookies, and update preferences for optimal balance of privacy and functionality.</p>
+      </li>
+      <li>
+        <h3>Cookie Policy Updates</h3>
+        <p>Updates to this cookie policy will be posted on this page. You are encouraged to review periodically to remain informed of our practices.</p>
+      </li>
+      <li>
+        <h3>Cookie Information Transparency</h3>
+        <p>We disclose cookie details, including purposes and durations, to foster confident and informed choices by our users.</p>
+      </li>
+      <li>
+        <h3>Your Consent Record</h3>
+        <p>We maintain records of your cookie consent status and preferences as proof of compliance and to honor your choices.</p>
+      </li>
+      <li>
+        <h3>Cookie Audit and Compliance</h3>
+        <p>Periodic audits ensure all cookies in use are compliant with regulations and aligned with our stated policies.</p>
+      </li>
+      <li>
+        <h3>Cookies and Your Rights</h3>
+        <p>Under applicable law, you may have rights to access, correct, restrict, or delete personal data connected to cookies. We strive to facilitate those rights effectively.</p>
+      </li>
+      <li>
+        <h3>Cookie Consent Revocation</h3>
+        <p>You may revoke cookie consent at any time via website tools or browser settings without affecting the lawfulness of prior processing.</p>
+      </li>
+      <li>
+        <h3>Contact Details</h3>
+        <p>Rootelle Pruning</p>
+        <p>Address: 120 E 12th St, New York, NY 10003, USA</p>
+        <p>Phone: (555) 123-4567</p>
+        <p>Email: <a href="mailto:info@rootellepruning.com">info@rootellepruning.com</a></p>
+      </li>
+    </ol>
+  </section>
+</main>
+
+<footer role="contentinfo" id="contact">
+  <div class="footer-container">
+    <address class="footer-address">
+      <strong>Contact Us:</strong><br />
+      Rootelle Pruning<br />
+      120 E 12th St, New York, NY 10003, USA<br />
+      Phone: (555) 123-4567<br />
+      Email: <a href="mailto:info@rootellepruning.com">info@rootellepruning.com</a>
+    </address>
+    <div class="footer-social" aria-label="Social Media Links" style="margin-top:0.5rem;">
+      <a href="#" aria-label="Facebook" tabindex="0"><span class="material-icons">facebook</span></a>
+      <a href="#" aria-label="Twitter" tabindex="0"><span class="material-icons">twitter</span></a>
+      <a href="#" aria-label="Instagram" tabindex="0"><span class="material-icons">instagram</span></a>
+      <a href="#" aria-label="LinkedIn" tabindex="0"><span class="material-icons">linkedin</span></a>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent popup">
+  <p>We use cookies to personalize content, analyze traffic and improve your experience on our site. By clicking "Accept", you consent to our use of cookies. You can decline all non-essential cookies by clicking "Decline".</p>
+  <div class="buttons">
+    <button class="accept-btn" aria-label="Accept cookies">Accept</button>
+    <button class="decline-btn" aria-label="Decline cookies">Decline</button>
+  </div>
+</div>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('button.mobile-menu-toggle');
+  const mobileNav = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    const links = mobileNav.querySelectorAll('a');
+    links.forEach(link => {
+      link.tabIndex = isOpen ? 0 : -1;
+    });
+  });
+
+  mobileNav.addEventListener('keydown', e => {
+    if (!mobileNav.classList.contains('open')) return;
+    const focusable = Array.from(mobileNav.querySelectorAll('a'));
+    const first = focusable[0];
+    const last = focusable[focusable.length -1];
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    }
+    if (e.key === 'Escape') {
+      menuToggle.click();
+      menuToggle.focus();
+    }
+  });
+
+  // Cookie Consent Handling
+  const cookieConsent = document.getElementById('cookie-consent');
+  const acceptBtn = cookieConsent.querySelector('.accept-btn');
+  const declineBtn = cookieConsent.querySelector('.decline-btn');
+
+  // Check if consent is stored
+  const consent = localStorage.getItem('rootelle_cookie_consent');
+
+  function hideConsent() {
+    cookieConsent.style.display = 'none';
+  }
+
+  function showConsent() {
+    cookieConsent.style.display = 'flex';
+  }
+
+  if (consent === 'accepted' || consent === 'declined') {
+    hideConsent();
+  } else {
+    showConsent();
+  }
+
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('rootelle_cookie_consent', 'accepted');
+    hideConsent();
+    // Here you can activate tracking scripts or analytics
+  });
+
+  declineBtn.addEventListener('click', () => {
+    localStorage.setItem('rootelle_cookie_consent', 'declined');
+    hideConsent();
+    // Here you can disable tracking or restrict cookies
+  });
+</script>
+</body>
+</html>
+
