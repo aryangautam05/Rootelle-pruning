@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact Us - Rootelle Pruning Services</title>
+<meta name="description" content="Contact Rootelle Pruning Services for expert pruning services, customer support, and inquiries." />
+<!-- Google Fonts & Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  /* Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #eaf4e9, #d1ead7);
+    color: #000;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #444;
+    outline: none;
+  }
+  h1, h2, h3 {
+    color: #000;
+    margin-top: 0;
+  }
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 24px;
+  }
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #2a5d34;
+    padding-bottom: 12px;
+  }
+  h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1em;
+  }
+  p {
+    margin-bottom: 1.25em;
+    font-size: 1.125rem;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 2em;
+  }
+  li {
+    margin-bottom: 1em;
+  }
+  /* Container */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: #d1ead7cc;
+    backdrop-filter: saturate(180%) blur(10px);
+    box-shadow: 0 2px 5px rgba(30,50,20,0.1);
+    z-index: 1000;
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.75rem 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo .material-icons {
+    font-size: 2rem;
+    color: #2a5d34;
+  }
+  nav.desktop-nav {
+    display: flex;
+    gap: 24px;
+  }
+  nav.desktop-nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 0;
+    position: relative;
+    color: #000;
+  }
+  nav.desktop-nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #2a5d34;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+  nav.desktop-nav a:hover::after,
+  nav.desktop-nav a:focus::after {
+    width: 100%;
+  }
+  button.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2.4rem;
+    color: #000;
+    cursor: pointer;
+  }
+  button.mobile-menu-toggle:focus {
+    outline: 2px solid #2a5d34;
+    outline-offset: 3px;
+  }
+  nav.mobile-nav {
+    display: none;
+    background: #d1ead7dd;
+    backdrop-filter: saturate(180%) blur(10px);
+    padding: 1rem 1.5rem;
+  }
+  nav.mobile-nav.open {
+    display: block;
+  }
+  nav.mobile-nav a {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #000;
+  }
+  nav.mobile-nav a:last-child {
+    margin-bottom: 0;
+  }
+  /* Hero */
+  .hero {
+    background: linear-gradient(to bottom right, #3a6d32, #95bc7a);
+    color: #000;
+    padding: 6rem 1.5rem 3rem;
+    text-align: center;
+  }
+  .hero h1 {
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 0;
+  }
+  /* Form */
+  form.contact-form {
+    max-width: 700px;
+    margin: 2rem auto 5rem;
+    background: #f4f9f4;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(60,100,40,0.1);
+  }
+  form.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+  }
+  form.contact-form input,
+  form.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #a3c27a;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+  }
+  form.contact-form input:focus,
+  form.contact-form textarea:focus {
+    border-color: #2a5d34;
+    outline: none;
+  }
+  form.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  form.contact-form button {
+    background: linear-gradient(135deg, #5a923b, #2a5d34);
+    color: #fff;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(42,93,52,0.6);
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+  }
+  form.contact-form button:hover,
+  form.contact-form button:focus {
+    background: linear-gradient(135deg, #2a5d34, #5a923b);
+    box-shadow: 0 12px 30px rgba(42,93,52,0.9);
+    outline: none;
+  }
+  /* Terms content */
+  section.details ol {
+    counter-reset: item;
+  }
+  section.details ol li {
+    margin-bottom: 3rem;
+  }
+  section.details ol li h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  section.details ol li p {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+  }
+  /* Footer */
+  footer {
+    background: #355e23;
+    color: #d8ecd1;
+    padding: 3rem 1.5rem;
+  }
+  footer .footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+  }
+  footer a {
+    color: #d8ecd1;
+    text-decoration: underline;
+  }
+  footer a:hover, footer a:focus {
+    color: #a3c27a;
+  }
+  /* Responsive */
+  @media (max-width: 767px){
+    nav.desktop-nav {
+      display: none;
+    }
+    button.mobile-menu-toggle {
+      display: block;
+    }
+    .hero {
+      padding: 80px 16px 64px;
+    }
+    h1 {
+      font-size: 2.25rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Rootelle Pruning homepage">
+      <span class="material-icons" aria-hidden="true">park</span> Rootelle Pruning
+    </a>
+    <nav class="desktop-nav" role="navigation" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="contact.html">Contact</a>
+      <a href="#">Services</a>
+    </nav>
+    <button class="mobile-menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span class="material-icons" aria-hidden="true">menu</span>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="mobile-nav" role="navigation" aria-label="Mobile primary navigation">
+    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+  </nav>
+</header>
+
+<section class="hero" aria-label="Contact page introduction">
+  <h1>Contact Rootelle Pruning</h1>
+  <p>We’re here to help you with any inquiries, service requests, or support you need. Use the form below to get in touch with our team.</p>
+</section>
+
+<main class="container" role="main">
+  <!-- Contact Form -->
+  <form class="contact-form" aria-label="Contact form for Rootelle Pruning" method="POST" action="#">
+    <label for="name">Full Name*</label>
+    <input type="text" id="name" name="name" placeholder="Your full name" required aria-required="true" />
+
+    <label for="email">Email Address*</label>
+    <input type="email" id="email" name="email" placeholder="Your email address" required aria-required="true" />
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
+
+    <label for="message">Message*</label>
+    <textarea id="message" name="message" placeholder="Your message or inquiry" required aria-required="true" ></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <!-- Large detailed contact info points -->
+  <section class="details" aria-label="Contact details and information">
+    <ol>
+      <li>
+        <h3>How to Reach Us for Service Inquiries</h3>
+        <p>Getting the right pruning service is simple with Rootelle. You can use our contact form or call us directly to discuss your needs. We aim to respond within 24 hours to provide consultation and schedule site visits for assessments. We encourage detailed descriptions to advise on the best pruning solutions tailored to your property.</p>
+      </li>
+      <li>
+        <h3>Operational Hours for Customer Support</h3>
+        <p>Our customer support team is available from Monday to Friday, 8 AM to 6 PM. We prioritize calls and emails during this time to ensure quick responses. Outside operational hours, inquiries will be addressed the following business day. Emergencies related to safety pruning can be reported via phone for immediate action.</p>
+      </li>
+      <li>
+        <h3>Requesting On-site Consultations</h3>
+        <p>For accurate service quotes, an on-site visit is often necessary. You can request a consultation by using our contact form or phone. Our experts will arrange a convenient appointment to evaluate your trees and garden condition, discuss your goals, and advise on the best pruning plans available.</p>
+      </li>
+      <li>
+        <h3>Scheduling Pruning Services</h3>
+        <p>Scheduling is flexible based on your requirements and availability. Contact us early to secure preferred dates, especially in peak seasons. We accommodate both one-time and recurring maintenance schedules. Clear communication of your schedule helps us deliver punctual and organized services.</p>
+      </li>
+      <li>
+        <h3>Submitting Service Requests Online</h3>
+        <p>Our website’s contact form is designed for easy and secure service requests. Provide as much information as possible about the property size, tree types, and pruning needs. Attachments or photos can be included during submission to assist our evaluation team. All submissions receive acknowledgment and next-step guidance.</p>
+      </li>
+      <li>
+        <h3>Managing Privacy and Security of Submitted Information</h3>
+        <p>All data you submit through the contact page is handled according to our privacy policy. We maintain strict confidentiality, employ encryption, and ensure that your information is only accessible to authorized personnel responsible for service delivery. We do not share your data without consent, ensuring peace of mind when reaching out.</p>
+      </li>
+      <li>
+        <h3>Phone Support Etiquette and Procedures</h3>
+        <p>Our phone lines are staffed with courteous, knowledgeable representatives ready to assist. When calling, please have relevant details ready such as address, problem descriptions, and preferred times. Phone etiquette promotes efficient communication and faster resolution of your queries.</p>
+      </li>
+      <li>
+        <h3>Handling Emergency Requests</h3>
+        <p>For urgent pruning needs involving safety risks, please call immediately. We prioritize emergency service requests to mitigate hazards promptly. Details provided during emergency calls enable rapid dispatch of trained arborists equipped to handle dangerous branches or tree conditions.</p>
+      </li>
+      <li>
+        <h3>Confirmation of Appointments</h3>
+        <p>Prior to service, we send confirmations via email or SMS to ensure you are informed and prepared. Confirmations include date, time, scope of work, and safety instructions. We may request confirmations to finalize scheduling and avoid delays.</p>
+      </li>
+      <li>
+        <h3>Cancellation and Rescheduling Policies</h3>
+        <p>Notify us at least 24 hours before appointments for cancellations or rescheduling. This courtesy allows us to allocate resources efficiently and may prevent cancellation fees. Timely communication maintains service flow and customer satisfaction.</p>
+      </li>
+      <li>
+        <h3>Use of Contact Information for Notifications</h3>
+        <p>We use your provided contact information to send relevant notifications, service reminders, and updates. Keeping your contact records up to date helps you stay informed and ensures smooth service delivery.</p>
+      </li>
+      <li>
+        <h3>Support for Special Needs and Requests</h3>
+        <p>If you have special requirements such as wheelchair access, noise sensitivities, or other accommodations, please inform us during the contact process. Our team strives to adapt services appropriately to meet customer needs and provide comfortable experiences.</p>
+      </li>
+      <li>
+        <h3>Feedback and Testimonials Submission</h3>
+        <p>Your feedback helps us improve. Use the contact form or direct email to share your experiences, suggestions, or concerns. Testimonials may be used on our website to showcase customer satisfaction with your permission. We value your voice and actively implement constructive feedback.</p>
+      </li>
+      <li>
+        <h3>Technical Support for Website Issues</h3>
+        <p>If you encounter technical issues with our website or online forms, please report them using the contact page. Provide details about the problem, your browser, or device for effective troubleshooting. We aim to maintain a seamless online experience for all visitors.</p>
+      </li>
+      <li>
+        <h3>Accessibility Help and Accommodations</h3>
+        <p>We are committed to accessibility. Contact us if you require assistance navigating the site or accessing information in alternative formats. Our team will strive to accommodate needs promptly.</p>
+      </li>
+      <li>
+        <h3>Response Time Estimates</h3>
+        <p>Typical response time to customer inquiries is within 24 business hours. Complex requests or high traffic periods may extend response times slightly. We prioritize all messages fairly to ensure prompt answers.</p>
+      </li>
+      <li>
+        <h3>Contacting Specific Departments</h3>
+        <p>We have dedicated teams for appointments, billing, technical help, and service inquiries. Indicate your concern in the message to direct it appropriately, improving resolution speed. Contact details are provided for urgent department-specific queries.</p>
+      </li>
+      <li>
+        <h3>Security and Anti-Spam Measures</h3>
+        <p>To prevent spam and abuse via the contact form, we employ captcha or other verification methods. Users are expected to submit legitimate inquiries only. Malicious submissions may be blocked or reported.</p>
+      </li>
+      <li>
+        <h3>Data Processing Consent on Contact</h3>
+        <p>By submitting inquiries, you consent to processing of your data to respond and provide requested services. We follow strict data protection standards to safeguard your information.</p>
+      </li>
+      <li>
+        <h3>Use of Contact Information for Marketing</h3>
+        <p>We will not use your contact details for promotional purposes unless you have explicitly opted in. Respect of your communication preferences is a priority.</p>
+      </li>
+      <li>
+        <h3>Contact Form Validation and Required Fields</h3>
+        <p>All required fields must be properly filled to submit the form successfully. This ensures we have necessary details to contact you back with accurate information.</p>
+      </li>
+      <li>
+        <h3>Privacy Statement Link in Contact</h3>
+        <p>A link to our Privacy Policy is prominently available to explain how your data is handled through contact channels.</p>
+      </li>
+      <li>
+        <h3>FAQs and Self-Service Resources</h3>
+        <p>We encourage visitors to explore FAQs and resources on our site before contacting us for common questions. This may provide instant answers and reduce wait times.</p>
+      </li>
+      <li>
+        <h3>Multiple Contact Channels</h3>
+        <p>Besides the form and phone, customers can reach us through email and social media platforms. Multiple channels offer convenient options based on preference and urgency.</p>
+      </li>
+      <li>
+        <h3>Appointment Reminders</h3>
+        <p>We send reminders via email or SMS ahead of scheduled pruning services to confirm appointments and minimize no-shows.</p>
+      </li>
+      <li>
+        <h3>Customer Support Hours and Holidays</h3>
+        <p>We are closed on major holidays. Support hours are posted clearly, and out-of-hours inquiries are handled as soon as possible on next business day.</p>
+      </li>
+      <li>
+        <h3>Security of Submitted Data</h3>
+        <p>Data submitted through our contact page is encrypted using SSL protocols to protect against interception or misuse.</p>
+      </li>
+      <li>
+        <h3>Language Support</h3>
+        <p>Our customer service supports English and may accommodate other languages with advance notice to reduce miscommunication.</p>
+      </li>
+      <li>
+        <h3>Customer Satisfaction Commitment</h3>
+        <p>We take all inquiries seriously and aim to provide professional, courteous, and comprehensive responses to enhance satisfaction.</p>
+      </li>
+      <li>
+        <h3>Resolution of Complaints</h3>
+        <p>If you have a complaint about services or communications, contact us for swift investigation and resolution tracking.</p>
+      </li>
+      <li>
+        <h3>Feedback Loop Enhancements</h3>
+        <p>Feedback received via contact forms contributes directly to continual improvement of pruning services and customer relations.</p>
+      </li>
+      <li>
+        <h3>Handling Returned Contact Requests</h3>
+        <p>Occasionally, reply attempts may fail due to incorrect contact details. We encourage verification to ensure successful communication.</p>
+      </li>
+      <li>
+        <h3>Terms of Use of Contact Data</h3>
+        <p>Information you provide through contact channels is used solely in accordance with our Privacy Policy and terms of use for responsible communication.</p>
+      </li>
+      <li>
+        <h3>Use of Automated Acknowledgements</h3>
+        <p>After submitting contact details, you may receive automated acknowledgment emails with expected response times.</p>
+      </li>
+      <li>
+        <h3>Special Offers and Promotions</h3>
+        <p>Opt-in customers may receive special offers via contact communications; you can unsubscribe anytime.</p>
+      </li>
+      <li>
+        <h3>Online Support Chat (Future Feature)</h3>
+        <p>We plan to offer real-time online chat support for instant queries as a future enhancement.</p>
+      </li>
+      <li>
+        <h3>User Feedback Importance</h3>
+        <p>Your input helps shape our services. We welcome suggestions for new features or service improvements.</p>
+      </li>
+      <li>
+        <h3>System Maintenance Notices</h3>
+        <p>We notify users via contact channels regarding planned outages or maintenance affecting services.</p>
+      </li>
+      <li>
+        <h3>Contact Form Accessibility</h3>
+        <p>Our contact form adheres to accessibility standards, ensuring usable by all visitors including assistive technology users.</p>
+      </li>
+      <li>
+        <h3>User Responsibility for Information Accuracy</h3>
+        <p>Please ensure that all information submitted is truthful and accurate to enable effective service and communication.</p>
+      </li>
+      <li>
+        <h3>Data Retention</h3>
+        <p>Contact data is retained as needed for service provision and legal compliance, then securely deleted according to policy.</p>
+      </li>
+      <li>
+        <h3>Contact Data Sharing Restrictions</h3>
+        <p>We do not sell or share your contact data externally beyond authorized service partners.</p>
+      </li>
+      <li>
+        <h3>Security Incident Reporting</h3>
+        <p>Please notify us immediately if you suspect misuse or exposure of your contact information.</p>
+      </li>
+      <li>
+        <h3>Privacy Policy Reference</h3>
+        <p>All contact activities are governed by our comprehensive Privacy Policy accessible on our website.</p>
+      </li>
+      <li>
+        <h3>Contact Data Encryption</h3>
+        <p>We encrypt stored contact information to protect your privacy and comply with data protection laws.</p>
+      </li>
+      <li>
+        <h3>Contact Information Accuracy and Changes</h3>
+        <p>Notify us promptly of any changes to your contact details to maintain effective communication.</p>
+      </li>
+      <li>
+        <h3>Personal Data Access Request</h3>
+        <p>You may request access to your contact information held by us by reaching out via email or phone.</p>
+      </li>
+      <li>
+        <h3>Cookies and Tracking in Contact Process</h3>
+        <p>Cookies used in the contact process enhance usability but do not collect personal data directly.</p>
+      </li>
+      <li>
+        <h3>Customer Consent Management</h3>
+        <p>Your submissions represent consent to data handling as described; you can withdraw consent anytime by contacting us.</p>
+      </li>
+      <li>
+        <h3>Spam and Abuse Protection</h3>
+        <p>We monitor contact form submissions to prevent spam or abusive messages and protect our users.</p>
+      </li>
+      <li>
+        <h3>Contact Method Preferences</h3>
+        <p>Specify your preferred contact method to help us reach you effectively.</p>
+      </li>
+      <li>
+        <h3>Response Delay Causes</h3>
+        <p>High demand or complex inquiries may cause response delays; we appreciate your patience.</p>
+      </li>
+      <li>
+        <h3>Multi-language Support Plans</h3>
+        <p>We are developing multi-language contact support to serve a diverse customer base.</p>
+      </li>
+      <li>
+        <h3>Emergency Phone Assistance</h3>
+        <p>Phone calls provide fastest response for urgent service requests requiring immediate attention.</p>
+      </li>
+      <li>
+        <h3>Feedback on Contact Experience</h3>
+        <p>Share your experience interacting with our contact channels to help us refine our processes.</p>
+      </li>
+      <li>
+        <h3>Contact Data Storage Locations</h3>
+        <p>Your contact information is securely stored on servers compliant with international privacy standards.</p>
+      </li>
+    </ol>
+  </section>
+</main>
+
+<footer role="contentinfo" id="contact">
+  <div class="footer-container">
+    <address class="footer-address">
+      <strong>Contact Us:</strong><br />
+      Rootelle Pruning<br />
+      120 E 12th St, New York, NY 10003, USA<br />
+      Phone: (555) 123-4567<br />
+      Email: <a href="mailto:info@rootellepruning.com">info@rootellepruning.com</a>
+    </address>
+    <div class="footer-social" aria-label="Social Media Links" style="margin-top:0.5rem;">
+      <a href="#" aria-label="Facebook" tabindex="0"><span class="material-icons">facebook</span></a>
+      <a href="#" aria-label="Twitter" tabindex="0"><span class="material-icons">twitter</span></a>
+      <a href="#" aria-label="Instagram" tabindex="0"><span class="material-icons">instagram</span></a>
+      <a href="#" aria-label="LinkedIn" tabindex="0"><span class="material-icons">linkedin</span></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const menuToggle = document.querySelector('button.mobile-menu-toggle');
+  const mobileNav = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    // Manage accessibility tabindex for mobile links
+    const links = mobileNav.querySelectorAll('a');
+    links.forEach(link => {
+      link.tabIndex = isOpen ? 0 : -1;
+    });
+  });
+
+  mobileNav.addEventListener('keydown', e => {
+    if (!mobileNav.classList.contains('open')) return;
+    const focusable = Array.from(mobileNav.querySelectorAll('a'));
+    const first = focusable[0];
+    const last = focusable[focusable.length -1];
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    }
+    if (e.key === 'Escape') {
+      menuToggle.click();
+      menuToggle.focus();
+    }
+  });
+
+  // Optional: Form validation (basic example)
+  const form = document.querySelector('form.contact-form');
+  form.addEventListener('submit', e => {
+    // Basic validation
+    if (!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim()) {
+      alert('Please fill in all required fields before submitting.');
+      e.preventDefault();
+    }
+  });
+</script>
+</body>
+</html>
